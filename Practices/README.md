@@ -10,13 +10,12 @@ Hint:
 5. Increase counter if the condition is true 
 6. return a result <- counter / N N <- 30 
 
-Initialize the sample in 30 but can be any number 
-counter <- 0 for(i in rnorm(N))
-{ 
-rnorm is a generator of random numbers 
-if(i <= 1 & i >= -1)
-{ 
-counter <- counter + 1 #the counter is uppgrader in 1 each time 
-} 
-} 
-result <- counter / N #the result is counter/the size of the sample result
+N <- 30 #Initialize the sample in 30 but can be any number
+counter <- 0 
+for(i in rnorm(N)){ #rnorm is a generator of random numbers
+  if(i <= 1 & i >= -1){
+    counter <- counter + 1 #the counter is uppgrader in 1 each time 
+  } 
+}
+result <- counter / N  #the result is counter/the size of the sample result
+result
