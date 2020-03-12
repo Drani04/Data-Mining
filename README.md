@@ -84,34 +84,33 @@ M
 
 -----------------------------------------------Practice 4------------------------------------------------------
 #Dear Student,
-#
+
 #Welcome to the world of Basketball Data!
 #I'm sure you will enjoy this section of the R Programming course.
-#
+
 #Instructions for this dataset:
-# Simply select ALL the lines in this script by pressing 
-# CTRL+A on Windows or CMND+A on a Mac and execute them
-# Once you have executed the commands the following objects
-# will be created:
-# Matrices:
-# - FieldGoalAttempts
-# - FieldGoals
-# - Games
-# - MinutesPlayed
-# - Salary
-# Vectors:
-# - Players
-# - Seasons
+#Simply select ALL the lines in this script by pressing 
+#CTRL+A on Windows or CMND+A on a Mac and execute them
+#Once you have executed the commands the following objects
+#will be created:
+#Matrices:
+#- FieldGoalAttempts
+#- FieldGoals
+#- Games
+#- MinutesPlayed
+#- Salary
+#Vectors:
+#- Players
+#- Seasons
 #We will go understand these inside the course.
-#
 #Sincerely,
 #Kirill Eremenko
 #www.superdatascience.com
 
 #Copyright: These datasets were prepared using publicly available data.
-#           However, theses scripts are subject to Copyright Laws. 
-#           If you wish to use these R scripts outside of the R Programming Course
-#           by Kirill Eremenko, you may do so by referencing www.superdatascience.com in your work.
+#However, theses scripts are subject to Copyright Laws. 
+#If you wish to use these R scripts outside of the R Programming Course
+#by Kirill Eremenko, you may do so by referencing www.superdatascience.com in your work.
 
 #Comments:
 #Seasons are labeled based on the first year in the season
@@ -233,7 +232,7 @@ rm(KobeBryant_PTS, JoeJohnson_PTS, LeBronJames_PTS, CarmeloAnthony_PTS, DwightHo
 colnames(Points) <- Seasons
 rownames(Points) <- Players
 
-# Analysis
+#Analysis
 Games
 rownames(Games)
 colnames(Games)
@@ -241,15 +240,17 @@ colnames(Games)
 Games["KevinDurant", "2013"]
 Games["KobeBryant", "2013"]
 
-FieldGoals
 
-# Field goals
+
+
+#Field goals
 round(FieldGoals / Games, 1)
 
-# Minutes played
+#Minutes played
+#Minutes played
 round(MinutesPlayed / Games)
 
-# Visualize the data
+#Visualize the data
 ?matplot
 matplot(t(FieldGoals/Games), type ="b", pch=15:18, col=c(1:4, 6))
 legend("bottomleft", inset=0.01, legend=Players, col=c(1:4, 6), pch=15:18, horiz=F)
@@ -257,7 +258,7 @@ legend("bottomleft", inset=0.01, legend=Players, col=c(1:4, 6), pch=15:18, horiz
 matplot(t(FieldGoals/FieldGoalAttempts), type ="b", pch=15:18, col=c(1:4, 6))
 legend("bottomleft", inset=0.01, legend=Players, col=c(1:4, 6), pch=15:18, horiz=F)
 
-# Subsets
+#Subsets
 Games
 Games[1:3, 6:10]
 Games[c(1,10),]
@@ -271,7 +272,7 @@ is.vector(Games[1,])
 Games[1,,drop=F]
 Games[1,5, drop=F]
 
-# Visualizing Subsets
+#Visualizing Subsets
 
 Data <- MinutesPlayed[1:3,, drop=F]
 
@@ -286,7 +287,7 @@ matplot(t(Data), type ="b", pch=15:18, col=c(1:4, 6))
 legend("bottomleft", inset=0.01, legend=Players[1], col=c(1:4, 6), pch=15:18, horiz=F)
 Data
 
-# Functions
+#Functions
 myplot <- function(data, rows){
   Data <- data[rows,, drop=F]
   matplot(t(Data), type ="b", pch=15:18, col=c(1:4, 6))
@@ -306,6 +307,7 @@ myplot(Games/Salary,1:5)
 myplot(Games/Points,1:6)
 myplot(Games*Points,1:6)
 myplot(Games*MinutesPlayed,1:5)
+
 
 
 Practice 5
