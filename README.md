@@ -43,7 +43,15 @@ If the p-value is high, the observed difference is probably a fluke. Once the va
 
 ## Homework 3
 ### ElemStatLearn
-Es un conjunto de herramientas para modelar y comprender conjuntos de datos complejos. Es un área recientemente desarrollada en estadística y combina desarrollos paralelos en informática y, en particular, aprendizaje automático. El campo abarca muchos métodos, como el lazo y la regresión dispersa, los árboles de clasificación y regresión, y las máquinas de vectores de refuerzo y soporte. Se refiere a un vasto conjunto de herramientas para comprender datos. Estas herramientas se pueden clasificar como supervisadas o no supervisadas. En términos generales, SL supervisado implica la construcción de un modelo estadístico para predecir o estimar un producto basado en uno o más insumos. Los problemas de esta naturaleza ocurren en campos tan diversos como los negocios, la medicina, la astrofísica y las políticas públicas. Con SL no supervisado, hay entradas, pero no hay salida de supervisión; sin embargo, podemos aprender relaciones y estructura de tales datos.
+It is a set of tools to model and understand complex data sets. It is a recently developed area in statistics and combines parallel developments in computing and, in particular, machine learning. The field encompasses many methods, such as looping and sparse regression, classification and regression trees, and reinforcement and support vector machines. It refers to a vast set of tools for understanding data. These tools can be classified as supervised or unsupervised. In general terms, supervised SL involves the construction of a statistical model to predict or estimate a product based on one or more inputs. Problems of this nature occur in fields as diverse as business, medicine, astrophysics, and public policy. With unsupervised SL, there are inputs, but there is no supervisory output; however, we can learn relationships and structure from such data.
 
 ## Homework 4
+adasdasd
 
+## Practice 1
+
+## Practice 2
+
+## Practice 3
+
+## Practice 4
