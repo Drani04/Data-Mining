@@ -49,7 +49,53 @@ It is a set of tools to model and understand complex data sets. It is a recently
 adasdasd
 
 ## Practice 1
-
+```
+setwd("C:/Users/Daniel/Desktop/Practicas R")
+getwd()
+```
+```
+dataset <- read.csv(file.choose())
+dataset
+```
+```
+install.packages('caTools')
+library(caTools)
+```
+```
+set.seed(123)
+split <- sample.split(dataset$comision, SplitRatio = 2/3)
+training_set <- subset(dataset, split == TRUE)
+test_set <- subset(dataset, split == FALSE)
+```
+```
+regressor = lm(formula = comision ~ Ventas,
+               data = dataset)
+summary(regressor)
+```
+```
+y_pred = predict(regressor, newdata = test_set)
+```
+```
+library(ggplot2)
+ggplot() +
+  geom_point(aes(x=training_set$Ventas, y=training_set$comision),
+             color = 'red') +
+  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
+            color = 'blue') +
+  ggtitle('ventas vs comision (Training Set)') +
+  xlab('Ventas') +
+  ylab('Comision')
+  ```
+  ```
+  ggplot() +
+  geom_point(aes(x=test_set$Ventas, y=test_set$comision),
+             color = 'red') +
+  geom_line(aes(x = training_set$Ventas, y = predict(regressor, newdata = training_set)),
+            color = 'blue') +
+  ggtitle('ventas vs comision (Test Set)') +
+  xlab('Ventas') +
+  ylab('Comision')
+  ```
 ## Practice 2
 
 ## Practice 3
