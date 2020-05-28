@@ -49,32 +49,40 @@ It is a set of tools to model and understand complex data sets. It is a recently
 adasdasd
 
 ## Practice 1
+
+we specify the work area
 ```
 setwd("C:/Users/Daniel/Desktop/Practicas R")
 getwd()
 ```
+we choose our database to use
 ```
 dataset <- read.csv(file.choose())
 dataset
 ```
+installing caTools library
 ```
 install.packages('caTools')
 library(caTools)
 ```
+Splitting the dataset into the Training set and Test set
 ```
 set.seed(123)
 split <- sample.split(dataset$comision, SplitRatio = 2/3)
 training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
 ```
+Fitting Simple Linear Regression to the Training set
 ```
 regressor = lm(formula = comision ~ Ventas,
                data = dataset)
 summary(regressor)
 ```
+Predicting the Test set results
 ```
 y_pred = predict(regressor, newdata = test_set)
 ```
+Visualising the Training set results
 ```
 library(ggplot2)
 ggplot() +
@@ -86,6 +94,7 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
   ```
+  Visualising the Test set results
   ```
   ggplot() +
   geom_point(aes(x=test_set$Ventas, y=test_set$comision),
