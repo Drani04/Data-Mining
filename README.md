@@ -206,6 +206,65 @@ backwardElimination(training_set, SL)
 ``` 
 ## Evaluation
 
+Dataset is imported and declared as movies
+``` 
+movies <- read.csv(file.choose())
+movies
+``` 
+Dataset analysis
+``` 
+head(movies)#Muestra los primeros datos
+``` 
+Filter data by gender
+``` 
+gen <- movies[movies$Genre %in% c("action", "adventure", "animation", "comedy", "drama"),]
+``` 
+Filter data by recording studio 
+``` 
+stu <- gen[gen$Studio %in% c("Buena Vista Studios", "WB", "Fox", "Universal", "Paramount Pictures"),]
+``` 
+We use the ggplot2 library to graph
+``` 
+library(ggplot2)
+```
+We create a variable to save the ggplot structure
+``` 
+mp <- ggplot(data = stu, aes(x = Genre, y=Gross...US))
+mp +geom_boxplot()
+``` 
+Add jitter or noise or fluctuation in the data to scatter the data
+``` 
+p <- mp + geom_jitter() + geom_boxplot()
+p
+``` 
+Adjust the size and color to the study genre
+``` 
+p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) + 
+  geom_boxplot() 
+p
+``` 
+Black spots removed and boxplot transparent
+``` 
+p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) +
+  geom_boxplot(alpha=0.10, outlier.colour =NA)
+p
+```
+Title added to x, y axes to plot
+``` 
+p <- p +xlab("Genre") + ylab("Gross % US") + ggtitle("Domestic Gross % by Genre")
+p
+``` 
+Color, size and font are changed 
+``` 
+p <- p + theme(axis.title.x = element_text(color = "Blue", size = 18) ,
+               axis.title.y = element_text(color = "Blue", size = 18) ,
+               axis.text.x  = element_text(size = 12),
+               axis.text.y  = element_text(size = 12),
+               plot.title   = element_text(size = 18),
+               legend.title = element_text(size = 18),
+               text = element_text(family = "Bodoni 72 Smallcaps"))
+p
+``` 
 ## Colaborators
 - [Luis Daniel Lopez Valencia](https://github.com/Drani04)
 - [Fernando Ordaz Zamora](https://github.com/fernando-123)
