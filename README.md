@@ -112,4 +112,95 @@ ggplot() +
 
 ## Practice 3
 
+
+```
+setwd("C:/Users/Daniel/Desktop/Practicas R")
+getwd()
+```
+Importing the dataset
+```
+dataset <- read.csv(file.choose())
+```
+
+Encoding categorical data 
+```
+dataset$State = factor(dataset$State,
+                       levels = c('New York', 'California', 'Florida'),
+                       labels = c(1,2,3))
+dataset
+```
+
+Splitting the dataset into the Training set and Test set
+```
+library(caTools)
+set.seed(123)
+split <- sample.split(dataset$Profit, SplitRatio = 0.8)
+training_set <- subset(dataset, split == TRUE)
+test_set <- subset(dataset, split == FALSE)
+```
+Fitting Multiple Linear Regression to the Training set
+```
+#regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State)
+regressor = lm(formula = Profit ~ .,
+               data = training_set )
+summary(regressor)
+```
+
+Prediction the Test set results
+```
+y_pred = predict(regressor, newdata = test_set)
+y_pred
+```
+Building the optimal model using Backward Elimination, the regression formula is declared using the following formula, returns the data summary of the function 
+```
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State, data = dataset ) 
+summary(regressor)  
+```
+The regression formula is declared using the following formula, returns the summary of data of the function 
+```
+regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend, data = dataset )
+summary(regressor)  
+```
+The regression formula is declared using the following formula, returns the summary of data of the function
+```
+regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend, data = dataset )
+summary(regressor)   
+```
+The regression formula is declared using the following formula, returns the summary of data of the function
+```
+regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend, data = dataset )
+summary(regressor)   
+```
+The method for prediction is performed with 2 parameters, the result of the prediction is printed
+```
+y_pred = predict(regressor, newdata = test_set) 
+y_pred
+```
+
 ## Practice 4
+
+1. First, we need to select a level of significance to stay in the model. (SL = 0.05)
+2. Fit the complete model with all possible predictors / independent variables.
+3. Choose the predictor that has the highest P value, such that, if the P value> SL, go to step 4.
+4. Remove that predictor.
+5. Reconstruct and fit the model with the remaining variables.
+```
+backwardElimination <- function(x, sl) {  
+  numVars = length(x) 
+  for (i in c(1:numVars)){ 
+    regressor = lm(formula = Profit ~ ., data = x) 
+    maxVar = max(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"])
+    if (maxVar > sl){
+      j = which(coef(summary(regressor))[c(2:numVars), "Pr(>|t|)"] == maxVar)
+      x = x[, -j]
+    }
+    numVars = numVars - 1
+  }
+  return(summary(regressor))
+}
+
+SL = 0.05 #nivel de significancia
+#dataset = dataset[, c(1,2,3,4,5)]
+training_set
+backwardElimination(training_set, SL) 
+``` 
