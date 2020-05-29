@@ -233,28 +233,38 @@ We create a variable to save the ggplot structure
 mp <- ggplot(data = stu, aes(x = Genre, y=Gross...US))
 mp +geom_boxplot()
 ``` 
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex1.png) 
+
 Add jitter or noise or fluctuation in the data to scatter the data
 ``` 
 p <- mp + geom_jitter() + geom_boxplot()
 p
 ``` 
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex2.png) 
+
 Adjust the size and color to the study genre
 ``` 
 p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) + 
   geom_boxplot() 
 p
 ``` 
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex3.png) 
+
 Black spots removed and boxplot transparent
 ``` 
 p <- mp +geom_jitter(aes(size = Budget...mill., color=Studio)) +
   geom_boxplot(alpha=0.10, outlier.colour =NA)
 p
 ```
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex4.png) 
+
 Title added to x, y axes to plot
 ``` 
 p <- p +xlab("Genre") + ylab("Gross % US") + ggtitle("Domestic Gross % by Genre")
 p
 ``` 
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex5.png) 
+
 Color, size and font are changed 
 ``` 
 p <- p + theme(axis.title.x = element_text(color = "Blue", size = 18) ,
@@ -266,6 +276,7 @@ p <- p + theme(axis.title.x = element_text(color = "Blue", size = 18) ,
                text = element_text(family = "Bodoni 72 Smallcaps"))
 p
 ``` 
+![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/ex6.png) 
 ## Colaborators
 - [Luis Daniel Lopez Valencia](https://github.com/Drani04)
 - [Fernando Ordaz Zamora](https://github.com/fernando-123)
