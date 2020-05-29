@@ -204,3 +204,8 @@ SL = 0.05 #nivel de significancia
 training_set
 backwardElimination(training_set, SL) 
 ``` 
+## Evaluation
+
+## Colaborators
+- [Luis Daniel Lopez Valencia](https://github.com/Drani04)
+- [Fernando Ordaz Zamora](https://github.com/fernando-123)
