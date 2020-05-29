@@ -94,6 +94,8 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
   ```
+ ![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/img1.png) 
+  
   Visualising the Test set results
   ```
   ggplot() +
@@ -105,6 +107,7 @@ ggplot() +
   xlab('Ventas') +
   ylab('Comision')
   ```
+  ![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/img2.png) 
 ## Practice 2
 
 ## Practice 3
