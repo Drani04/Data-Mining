@@ -110,8 +110,9 @@ ggplot() +
   ![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/img2.png) 
 ## Practice 2
 
-## Practice 3
+Upgrade R to version 3.6
 
+## Practice 3
 
 ```
 setwd("C:/Users/Daniel/Desktop/Practicas R")
