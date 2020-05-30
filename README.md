@@ -608,6 +608,7 @@ main = "Ploteo de dispersión de Expectancy vs Fertility en 2013")
 
 
 #------------------------------Analisis--------------------------------------------
+
 #En África La esperanza de vida aumentó de 35-50 años a 45-75 años  
 #mientras que la fertilidad se mantiene con un promedio de 4 a 8 hijos
 
