@@ -100,7 +100,6 @@ It is a set of tools to model and understand complex data sets. It is a recently
 ### BodyPartRecognition
 
 ## Practice 1
-
 we specify the work area
 ```
 setwd("C:/Users/Daniel/Desktop/Practicas R")
@@ -159,12 +158,8 @@ ggplot() +
   ylab('Comision')
   ```
   ![img](https://github.com/Drani04/Data-Mining/blob/Unit-2/Images/img2.png) 
+  
 ## Practice 2
-
-Upgrade R to version 3.6
-
-## Practice 3
-
 ```
 setwd("C:/Users/Daniel/Desktop/Practicas R")
 getwd()
@@ -229,8 +224,7 @@ y_pred = predict(regressor, newdata = test_set)
 y_pred
 ```
 
-## Practice 4
-
+## Practice 3
 1. First, we need to select a level of significance to stay in the model. (SL = 0.05)
 2. Fit the complete model with all possible predictors / independent variables.
 3. Choose the predictor that has the highest P value, such that, if the P value> SL, go to step 4.
@@ -256,6 +250,10 @@ SL = 0.05 #nivel de significancia
 training_set
 backwardElimination(training_set, SL) 
 ``` 
+## Practice 4
+## Practice 5
+## Practice 6
+
 ## Evaluation
 
 Dataset is imported and declared as movies
