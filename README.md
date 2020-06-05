@@ -2,12 +2,13 @@
 
 ## Content
 
-
 - Homework 1
 - Homework 2
 - Homework 3
 - Homework 4
 - Homework 5
+- Homework 6
+- Homework 7
 - Practice 1
 - Practice 2
 - Practice 3
@@ -32,20 +33,6 @@ It means that instead of building the graph what I know how to do is describe wh
 - Geometric object
 
 ## Homework 2
-### P Value
-A p value (probability value) is a statistical measurement between 0 and 1. The p value is used to answer a hypothesis. A hypothesis is a question that admits a yes or no, or a false or true answer.
-A null hypothesis is the opposite of what our research is. A result is statistically significant (and allows the null hypothesis to be rejected) if it corresponds to a p value equal to or less than the significance level. This is usually expressed as p ≤ 0.05. A p <0.05 means that the null hypothesis is false and a p> 0.05 that the null hypothesis is true:
-To calculate the p-value, it is first assumed that there really is no difference between the two theories. 
-Then, if the assumption is true, the probability is calculated that the observed difference is due only to chance.
-This is the p-value. Therefore, the p-value is the probability of observing effects of the same importance as those observed in the study.
-If the p-value is low, the results are unlikely to be due to chance and the idea that there is no difference is rejected (the null hypothesis is rejected).
-If the p-value is high, the observed difference is probably a fluke. Once the value of P has been determined, the conclusion at any particular level results from comparing the value of P with the level of significance.
-
-## Homework 3
-### ElemStatLearn
-It is a set of tools to model and understand complex data sets. It is a recently developed area in statistics and combines parallel developments in computing and, in particular, machine learning. The field encompasses many methods, such as looping and sparse regression, classification and regression trees, and reinforcement and support vector machines. It refers to a vast set of tools for understanding data. These tools can be classified as supervised or unsupervised. In general terms, supervised SL involves the construction of a statistical model to predict or estimate a product based on one or more inputs. Problems of this nature occur in fields as diverse as business, medicine, astrophysics, and public policy. With unsupervised SL, there are inputs, but there is no supervisory output; however, we can learn relationships and structure from such data.
-
-## Homework 4
 ### Funcion geom_jitter()
 The jitter geom is a convenient shortcut for geom_point(position = "jitter"). It adds a
 small amount of random variation to the location of each point, and is a useful way of
@@ -65,6 +52,30 @@ geom_jitter(
  inherit.aes = TRUE
 )
 ```
+
+## Homework 3
+### P Value
+A p value (probability value) is a statistical measurement between 0 and 1. The p value is used to answer a hypothesis. A hypothesis is a question that admits a yes or no, or a false or true answer.
+A null hypothesis is the opposite of what our research is. A result is statistically significant (and allows the null hypothesis to be rejected) if it corresponds to a p value equal to or less than the significance level. This is usually expressed as p ≤ 0.05. A p <0.05 means that the null hypothesis is false and a p> 0.05 that the null hypothesis is true:
+To calculate the p-value, it is first assumed that there really is no difference between the two theories. 
+Then, if the assumption is true, the probability is calculated that the observed difference is due only to chance.
+This is the p-value. Therefore, the p-value is the probability of observing effects of the same importance as those observed in the study.
+If the p-value is low, the results are unlikely to be due to chance and the idea that there is no difference is rejected (the null hypothesis is rejected).
+If the p-value is high, the observed difference is probably a fluke. Once the value of P has been determined, the conclusion at any particular level results from comparing the value of P with the level of significance.
+
+## Homework 4
+### Function SplitRatio() and lm()
+
+## Homework 5
+### Function gml()
+
+## Homework 6
+### ElemStatLearn
+It is a set of tools to model and understand complex data sets. It is a recently developed area in statistics and combines parallel developments in computing and, in particular, machine learning. The field encompasses many methods, such as looping and sparse regression, classification and regression trees, and reinforcement and support vector machines. It refers to a vast set of tools for understanding data. These tools can be classified as supervised or unsupervised. In general terms, supervised SL involves the construction of a statistical model to predict or estimate a product based on one or more inputs. Problems of this nature occur in fields as diverse as business, medicine, astrophysics, and public policy. With unsupervised SL, there are inputs, but there is no supervisory output; however, we can learn relationships and structure from such data.
+
+## Homework 7
+### BodyPartRecognition
+
 ## Practice 1
 
 we specify the work area
