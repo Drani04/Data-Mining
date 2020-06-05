@@ -65,10 +65,33 @@ If the p-value is high, the observed difference is probably a fluke. Once the va
 
 ## Homework 4
 ### Function SplitRatio() and lm()
+Split data from vector Y into two sets in predefined ratio while preserving relative ratios of different labels in Y. Used to split the data used during classification into train and test subsets.
+```
+sample.split( Y, SplitRatio = 2/3, group = NULL )
+```
+lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance (although aov may provide a more convenient interface for these).
+```
+lm(formula, data, subset, weights, na.action,
+   method = "qr", model = TRUE, x = FALSE, y = FALSE, qr = TRUE,
+   singular.ok = TRUE, contrasts = NULL, offset, …)
+```
 
 ## Homework 5
 ### Function gml()
+glm is used to fit generalized linear models, specified by giving a symbolic description of the linear predictor and a description of the error distribution.
+```
+glm(formula, family = gaussian, data, weights, subset,
+    na.action, start = NULL, etastart, mustart, offset,
+    control = list(…), model = TRUE, method = "glm.fit",
+    x = FALSE, y = TRUE, singular.ok = TRUE, contrasts = NULL, …)
+glm.fit(x, y, weights = rep(1, nobs),
+        start = NULL, etastart = NULL, mustart = NULL,
+        offset = rep(0, nobs), family = gaussian(),
+        control = list(), intercept = TRUE, singular.ok = TRUE)
 
+ S3 method for glm
+weights(object, type = c("prior", "working"), …)
+```
 ## Homework 6
 ### ElemStatLearn
 It is a set of tools to model and understand complex data sets. It is a recently developed area in statistics and combines parallel developments in computing and, in particular, machine learning. The field encompasses many methods, such as looping and sparse regression, classification and regression trees, and reinforcement and support vector machines. It refers to a vast set of tools for understanding data. These tools can be classified as supervised or unsupervised. In general terms, supervised SL involves the construction of a statistical model to predict or estimate a product based on one or more inputs. Problems of this nature occur in fields as diverse as business, medicine, astrophysics, and public policy. With unsupervised SL, there are inputs, but there is no supervisory output; however, we can learn relationships and structure from such data.
