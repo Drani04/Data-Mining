@@ -698,3 +698,7 @@ La región de europa aumentó su esperanza de vida mediante avanzaron los años,
 En middle east aumentó la esperanza de vida de 70 a 80 años y la fertilidad aumentó bastante.
 En Oceanía la esperanza de vida aumentó de 60 a 80 años promedio y la fertilidad se mantuvo similar.
 En las américas la esperanza de vida aumentó en promedio 10 años y la fertilidad aumentó de 6 a 8 hijos.
+
+## Colaborators
+- [Luis Daniel Lopez Valencia](https://github.com/Drani04)
+- [Fernando Ordaz Zamora](https://github.com/fernando-123)
