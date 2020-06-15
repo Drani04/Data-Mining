@@ -1,4 +1,4 @@
---------------------------------------------------------Practice 1----------------------------------------------------------
+## Practice 1
 Test the Law Of Large Numbers for N random normally distributed numbers with mean = 0, stdev=1:
 
 #Create an R script that will count how many of these numbers fall between -1 and
@@ -25,7 +25,7 @@ for(i in rnorm(N)){ #rnorm generá numeros random
 result <- counter / N
 result
 
---------------------------------------------------------Practice 2----------------------------------------------------------
+## Practice 2
 #1. cat() - combine character values and print them to the screen or save them in a file directly
 cat('one',2,'three',4,'five') #one 2 three 4 five
 
@@ -111,7 +111,9 @@ sum (x)
 
 
 
---------------------------------------------------------Practice 3-----------------------------------------------------------
+## Practice 3
+
+
 
 #Data
 revenue <- c(14574.49, 7606.46, 8611.41, 9175.41, 8058.65, 8105.44, 11496.28, 9766.09, 10305.32, 14379.96, 10713.97, 15433.50)
@@ -191,7 +193,7 @@ M <- rbind(
 M
 
 
------------------------------------------------Practice 4------------------------------------------------------
+## Practice 4
 #Dear Student,
 
 #Welcome to the world of Basketball Data!
@@ -417,7 +419,7 @@ myplot(Games/Points,1:6)
 myplot(Games*Points,1:6)
 myplot(Games*MinutesPlayed,1:5)
 
------------------------------------------------Practice 5------------------------------------------------------
+## Practice 5
 ?read.csv()
 
 #Method 1: Select the file manually
@@ -563,7 +565,7 @@ qplot(data = merged, x = Internet.users, y = Birth.rate,
 #9. Marging Data Frames: marge()
 #10. Visualizing with qplot: Part II
 
---------------------------------------------Evaluation 1 ------------------------------------------------------
+## Evaluation 1
 
 
 
@@ -607,19 +609,10 @@ qplot(data=merged2013, x=Fertility.Rate, y=Life.Exp, color=Region, size=I(2), sh
 main = "Ploteo de dispersión de Expectancy vs Fertility en 2013")
 
 
-#------------------------------Analisis--------------------------------------------
-
-#En África La esperanza de vida aumentó de 35-50 años a 45-75 años  
-#mientras que la fertilidad se mantiene con un promedio de 4 a 8 hijos
-
-#En Asia Aumentó la esperanza de vida de 50 a 70-80 años y  
-#la fertilidad sigue siendo muy dispersa de 1 a 8 hijos en ambas gráficas
-
-#La región de europa aumentó su esperanza de vida mediante avanzaron los años, 
-#en cuanto a la fertilidad se mantuvo donde la mayoría de personas tienen de 2 a 4 años
-
-#En middle east aumentó la esperanza de vida de 70 a 80 años y la fertilidad aumentó bastante
-
-#En Oceanía la esperanza de vida aumentó de 60 a 80 años promedio y la fertilidad se mantuvo similar
-
-#En las américas la esperanza de vida aumentó en promedio 10 años y la fertilidad aumentó de 6 a 8 hijos
+## Analisis
+En África La esperanza de vida aumentó de 35-50 años a 45-75 años, mientras que la fertilidad se mantiene con un promedio de 4 a 8 hijos.
+En Asia Aumentó la esperanza de vida de 50 a 70-80 años y la fertilidad sigue siendo muy dispersa de 1 a 8 hijos en ambas gráficas.
+La región de europa aumentó su esperanza de vida mediante avanzaron los años, en cuanto a la fertilidad se mantuvo donde la mayoría de personas tienen de 2 a 4 años.
+En middle east aumentó la esperanza de vida de 70 a 80 años y la fertilidad aumentó bastante.
+En Oceanía la esperanza de vida aumentó de 60 a 80 años promedio y la fertilidad se mantuvo similar.
+En las américas la esperanza de vida aumentó en promedio 10 años y la fertilidad aumentó de 6 a 8 hijos.
